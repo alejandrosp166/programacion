@@ -1,0 +1,81 @@
+---ARRAYS EN JAVA---
+
+para declararlos -> int[][] numeros = new int[filas][columnas]
+para declarar un Array con valores ya establecidos -> int[] numeros = {4,5,6,7,8,8,9} == int[7]
+para declarar un Array con valores ya establecidos pero el array es bidimensional -> int[][] numeros = {{1,2,3},{1,2,4},{5,7,6}} == int[3][3]
+para ordenar un array debemos -> Arrays.sort(nombreArray)
+para comparar arrays debemos -> Arrays.equals(Array1, Array2)
+para pasar una cadena a un array tipo char -> char[] c1 = cadena.ToCharArray()
+
+---FUNCIONES---
+
+para comentar tenemos @param para explicar que hace un parámetro
+además tenemos @return para especificar que devuelve la función
+
+para hacer una función debemos poner los siguiente:
+public static tipoDatoQueDevuelve(int[][], String, char...) nombreFuncion(parametros){return tipoDato} //solo podemos devolve un dato
+
+para hacer un método debemos poner lo siguiente:
+public static void nombreMetodo(parametros){}
+
+---DIFERENCIAS ENTRE PUBLIC/PRIVATE/PROTECTED--
+
+public -> Permite usar el elemento en cualquier parte del proyecto
+private -> permite usar el elemento solo en la clase que lo contiene
+protected -> permite usar el elemento solo en el paquete que lo contiene (si hay dos clases dentro de ese paquete se puede usar en las dos)
+
+---STATIC---
+
+No lo he entendido muy bien pero parece que el valor de esta variable se traspasa a las demás si se cambia
+
+---USO DE LIBRERÍAS MANUALES---
+
+para llamar a una función que se encuentre en otro sitio debemos -> nombreLiberia.nombreClase.nombreFuncion(parámetros si tuviera)
+además debemos importar la librería con: import nombreLibrería.nombreClase
+
+---NÚMEROS ALEATORIOS---
+
+int num = (int) Math.random() * 5 //Genera un número entre 0 y 4
+int num = (int) Math.random() * 5 + 1 //Genera un número entre 1 y 5
+int num = (int) Math.random() * (10 - 5 + 1) + 10 //Genera números entre 5 y 10
+
+---MÉTODOS STRINGS---
+
+-> cadena.length() Devuelve el número de caracteres de la cadena
+-> cadena.CharAt(0) Devuelver el caracter que se le ha indicado en la posición
+-> cadena.substring(valor inicial contando desde 0, valor final contando desde 1) //Nos muestra un rango de cadena
+-> cadena.concat(cadena) //Concatena
+-> .indexOf("") //Indica en que posición se encuentra una cadena en otra cadena (si la cadena es más larga solo nos dirá la pos del primer char)
+-> .lastIndexOf //Indica en que posición s encuentra una cadena en otra cadena (pero esta vez será la última vez que aparezca)
+-> .equals() //Es lo mismo que == pero se usa para Strings
+-> .equalsIgnoreCase() //Es lo mismo que .equals() pero ignora mayúsculas y minúsculas
+-> .compareTo() //Devuelve un número entero que indica cual es mayor lexicográficamente ejmplo:
+	int res = cadena1.compareTo(s2) // res < 0 cadena1 es menor que cadena 2
+					// res == 0 las dos cadena son iguales
+					// res > 0 cadena1 es mayor que cadena2
+->.compareToIgnoreCase() //Lo mismo que compareTo pero ignora mayúsculas
+-> .toLoweCase() //pasa a minúsculas
+-> .toUpperCase() //pasa a mayúsculas
+-> .trim() //Quita espacios delante y detrás
+-> .replace(antiguo, nuevo) //remplaza un char por otro en una cadena entera
+
+---PASAR DE STRINGS A OTROS FORMATOS---
+
+---De char a string
+-> String cadena = String.valueOf(caracter)
+
+---De números a String
+-> String cadena = Integer.toString(numero)
+-> String cadena = Long.toString(numero)
+-> String cadena = Short.toString(numero)
+-> String cadena = Byte.toString(numero)
+-> String cadena = Double.toString(numero)
+-> String cadena = Float.toString(numero)
+
+---De Strings a números
+->long num = Long.parseLong(cadena)
+->int num = Integer.parseInt(cadena)
+->short num = Short.parseShort(cadena)
+->byte num = Byte.parseByte(cadena)
+->double num = Double.parseDouble(cadena)
+->float num = Float.parseFloat
